@@ -1,0 +1,52 @@
+import java.util.Scanner;
+class Emrip 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int num=sc.nextInt();
+		boolean flag=true;
+		int rev=0;
+	    for (int i=2;i<num ;i++ )
+	  {
+		if (num%i==0)
+		{
+			flag=false;
+			
+			break;
+		}
+			
+	 }
+	 if(flag)
+		{
+		 System.out.println("Number is prime");
+		 for (int j=num;j>0 ;j=j/10 )
+		 {
+			int rem=j%10;
+			rev=rev*10+rem;
+			
+			  
+		 }
+		System.out.println(rev);
+		 for (int i=2;i<rev ;i++ )
+	  {
+		if (rev%i==0)
+		{
+			flag=false;
+			
+			break;
+		}
+			
+	 }
+	 if(flag)
+		{
+		 System.out.println("Number is prime");
+		}
+		else
+			System.out.println("Not prime");
+		}
+		 else
+			 System.out.println("Not prime");
+	}
+}
